@@ -45,4 +45,37 @@ The server is configured with a static IPv4 address to ensure stability for Acti
 
 ## Organizational Unit (OU) Design
 Custom OUs were created to allow Group Policy application and proper administration:
+- LabUsers
+- LabComputers
+
+**Reasoning:** Default AD containers cannot receive Group Policy Objects (GPOs). Custom OUs allow policy application and proper management.
+
+## User Management
+- Created test domain users and placed them in the LabUsers OU
+- Built-in system accounts were left in default containers to avoid system issues
+
+## Verification & Testing
+- Verified domain controller functionality via Active Directory Users and Computers
+- Confirmed DNS resolution using `nslookup lab.local`
+- Confirmed successful domain logon (`LAB\Administrator`)
+
+## Challenges & Solutions
+- **Challenge:** Server Manager continued to show a static IP warning after configuration  
+- **Solution:** Confirmed static IP using `ipconfig /all`. Warning safely ignored as it did not affect AD functionality
+
+## Skills Demonstrated
+- Windows Server 2022 administration
+- Active Directory Domain Services (AD DS)
+- DNS configuration and troubleshooting
+- Virtualization (VMware)
+- Network configuration (NAT, static IP)
+- Organizational Unit design
+
+## Next Steps
+- Join Windows 10/11 client to the domain
+- Configure Group Policy Objects (GPOs)
+- Implement file server permissions
+- Deploy a helpdesk ticketing system
+
+
 
