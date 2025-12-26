@@ -108,18 +108,64 @@ The screenshot below confirms that the client computer object was automatically 
 
 ![Client Computer in ADUC](screenshots/client-computer-aduc.png)
 
+## Group Policy Implementation and Verification
+
+Group Policy Objects (GPOs) were configured to enforce centralized security controls across the Active Directory environment.
+
+### Password Policy Configuration
+
+A domain-wide password policy was implemented to enforce strong authentication requirements, including minimum password length and complexity.
+
+![Password Policy](screenshots/password-policy.png)
+
+### User Screen Lock Policy
+
+A user-level Group Policy was created and linked to the `LabUsers` organizational unit to automatically lock user sessions after inactivity.
+
+![Screen Lock Policy](screenshots/screen-lock-policy.png)
+
+### Group Policy Verification
+
+Group Policy application was verified on a domain-joined client using the `gpresult` command, confirming that the security policies were successfully applied.
+
+![Group Policy Result](screenshots/gpresult.png)
+
 ## Skills Demonstrated
 
-- Windows Server 2022 administration
-- Active Directory Domain Services (AD DS)
-- DNS configuration and troubleshooting
-- Virtualization (VMware)
-- Network configuration (NAT, static IP)
-- Organizational Unit design
+Skills Demonstrated
 
-## Next Steps
+This project demonstrates hands-on experience with core enterprise IT and cybersecurity concepts through the design, deployment, and validation of a Windows Server Active Directory environment.
 
-- Join Windows 10/11 client to the domain
-- Configure Group Policy Objects (GPOs)
-- Implement file server permissions
-- Deploy a helpdesk ticketing system
+### Identity and Access Management
+
+- Active Directory Domain Services (AD DS) deployment and configuration
+- Domain Controller promotion and management
+- Domain user and computer account administration
+- Organizational Unit (OU) design and management
+
+### Networking and DNS
+
+- DNS configuration and dependency management for Active Directory
+- Client DNS troubleshooting to resolve domain connectivity issues
+- Domain controller discovery and name resolution verification
+
+### Group Policy and Endpoint Security
+
+- Group Policy Object (GPO) creation and linking
+- User and computer policy configuration
+- Password policy enforcement
+- Screen lock and session security controls
+- Policy application verification using gpresult and gpupdate
+
+### Virtualization and Lab Design
+
+- Virtual machine creation and management
+- Network configuration for domain-based environments
+- Client-to-server connectivity validation
+
+### Troubleshooting and Diagnostics
+
+- Active Directory connectivity troubleshooting
+- Group Policy update failure analysis and resolution
+- DNS and authentication issue diagnosis
+- Service validation on the Domain Controller
